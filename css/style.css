@@ -44,20 +44,20 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 160px;
-  height: 5600px;
-  position: relative;
 }
 
 /* MAIN CONTENT  */
 
 .main {
+  display: flex;
+  justify-content: center;
+
   background-image: url("../img/Background\ Image.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 1000px;
-  display: flex;
+  height: auto;
+  padding: 40px;
 }
 
 .main__row {
@@ -66,24 +66,34 @@ main {
   justify-content: center;
   align-items: center;
   line-height: 64px;
-  height: 234px;
 }
 
 .main__content {
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  max-width: 630px;
+}
+
+.firstpage__main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  max-width: 630px;
+  align-items: center;
+  padding-top: 150px;
 }
 
 .firstpage__motivation {
   text-align: center;
   color: #ffffff;
   font-size: 64px;
+  line-height: 78px;
 }
 
 .firstpage__button {
+  padding-top: 32px;
+}
+
+.firstpage__button button {
   border-radius: 16px;
   border: none;
   padding: 16px 64px;
@@ -94,28 +104,23 @@ main {
 }
 
 .firstpage__text {
+  padding-top: 32px;
   text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
   font-size: 20px;
+  font-weight: 400;
   width: 590px;
   line-height: normal;
 }
 
 @media (max-width: 480px) {
-  .main__btns {
-    flex-direction: column;
-  }
-
-  .main__col:last-child {
-    margin-top: 50px;
-  }
 }
 
 /* SECTION 2  ==================================================================================*/
 
 .information {
   width: 100%;
-  height: 1000px;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +138,6 @@ main {
   justify-content: center;
   align-items: center;
   line-height: normal;
-  height: 234px;
 }
 .information__content {
   display: flex;
@@ -150,7 +154,6 @@ main {
 .information__header p:last-child {
   font-size: 20px;
   font-weight: 400;
-  /* text-align: center; */
   color: rgba(152, 152, 152, 1);
 }
 
@@ -189,8 +192,9 @@ main {
 
 .secondpage__main {
   display: flex;
-  /* width: 100%; */
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 32px;
 }
 
@@ -237,11 +241,11 @@ main {
   color: #ffffff;
 }
 
-/* SECTION 3  ==================================================================================  */
+/* SECTION 3  =======================================================================  */
 .advantages {
   width: 100%;
-  height: 1000px;
   display: flex;
+  padding: 40px 0;
   align-items: center;
   justify-content: center;
 }
@@ -274,9 +278,6 @@ main {
   font-size: 20px;
   font-weight: 400;
   color: rgba(152, 152, 152, 1);
-}
-
-.thirdpage__right {
 }
 
 .thirdpage__right--item {
@@ -347,6 +348,7 @@ main {
 .thirdpage__bottom--text p {
   font-size: 32px;
   font-weight: 700;
+  line-height: 100%;
   margin-top: 20px;
   color: #ffffff;
 }
@@ -356,9 +358,10 @@ main {
   color: rgba(152, 152, 152, 1);
 }
 
-/* SYSTEM================================================================ */
+/* SECTION 4  ================================================================ */
 .system {
   width: 100%;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,6 +369,7 @@ main {
 
 .fourthpage__header {
   text-align: center;
+  padding-bottom: 32px;
 }
 
 .header {
@@ -380,14 +384,9 @@ main {
   color: #ffffff !important ;
 }
 
-.fourthpage {
-  /* width: 900px; */
-}
-
 .fourthpage__main {
   display: flex;
   align-items: center;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   border-radius: 24px;
   width: 100%;
@@ -416,8 +415,24 @@ main {
   gap: 32px;
 }
 
-.fourthpage__main--right {
+.fourthpage__main--text p:first-child {
+  padding-bottom: 16px;
+  color: rgba(152, 152, 152, 1);
 }
+.fourthpage__main--text p:last-child {
+  padding-top: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(152, 152, 152, 1);
+}
+
+.fourthpage__main--text {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(68, 197, 255, 1);
+}
+
+/*  */
 
 .fourthpage__main--right img {
   display: flex;
@@ -426,15 +441,8 @@ main {
   padding-right: 24px;
 }
 
-/* MEMBERSHIP=============================================================================== */
+/* SECTION 5  =============================================================================== */
 
-.membership {
-  width: 100%;
-  height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .membership__header {
   display: flex;
   align-items: center;
@@ -446,7 +454,6 @@ main {
   border-radius: 24px;
   background-color: rgba(0, 23, 45, 1);
   padding: 32px;
-  /* width: 100%; */
 }
 
 .membership__header p {
@@ -496,6 +503,13 @@ main {
 }
 
 .membership__button {
+  border-radius: 16px;
+  border: none;
+  padding: 16px 64px;
+  background-color: rgba(6, 167, 241, 1);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
   margin-top: 16px;
   border-radius: 12px;
 }
